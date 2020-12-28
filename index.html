@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <title>Choose your CHOOCHOO</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg" href="images/ccc-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      async
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let email = document.getElementById("email");
+        email.addEventListener("input", fontFam);
+      });
+
+      function fontFam(ev) {
+        let num = ev.charCode;
+        let letter = String.fromCharCode(num);
+        console.log(ev.type, num, letter, ev.target.value);
+        ev.target.style.fontFamily = "Roboto,sans-serif";
+      }
+    </script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <div id="branding">
+        <h1 id="company-name">
+          <a href="#">choose your choochoo</a>
+        </h1>
+
+        <a href="#">
+          <img src="images/ccc-icon.png" alt="choo choo icon" id="header-img" />
+        </a>
+      </div>
+
+      <!--Standard Menu-->
+      <nav id="nav-bar">
+        <a href="#train-img" class="nav-link" id="nav-link-one"> TRAINS </a>
+        <a href="#railroad-img" class="nav-link" id="nav-link-two"> TRACKS </a>
+        <a href="#pricing" class="nav-link" id="nav-link-three"> PRICING </a>
+      </nav>
+      <!--Standard Menu-->
+
+      <!--Hammy Menu-->
+      <div class="hamburger">
+        <div id="myLinks">
+          <a href="#train-img">TRAINS</a>
+          <a href="#railroad-img">TRACKS</a>
+          <a href="#pricing">PRICING</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!--Hammy Menu-->
+    </header>
+
+    <main>
+      <section id="cta">
+        <h2 id="cta-heading">Revolutionary Travel</h2>
+        <p id="cta-sub-heading">tickets moving fast!</p>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <div id="email-div">
+            <label for="email">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+                id="email"
+                required
+              />
+            </label>
+          </div>
+          <div id="submit-div">
+            <label for="submit">
+              <input type="submit" value="take a trip" id="submit" />
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section id="features">
+        <div id="void-uno"></div>
+
+        <img
+          src="images/train.png"
+          alt="train car"
+          class="features-img"
+          id="train-img"
+        />
+        <h3 class="features-heading" id="trains-heading">Trains</h3>
+        <p class="features-info" id="trains-info">
+          All Aboard. With CHOOCHOO,<br />you can go everywhere
+        </p>
+
+        <img
+          src="images/railroad.png"
+          alt="railroad tracks"
+          class="features-img"
+          id="railroad-img"
+        />
+        <h3 class="features-heading" id="tracks-heading">Tracks</h3>
+        <p class="features-info" id="tracks-info">
+          Riding on these,<br />now you will go everywhere
+        </p>
+
+        <img
+          src="images/warranty.png"
+          alt="document icon"
+          class="features-img"
+          id="doc-img"
+        />
+        <h3 class="features-heading" id="warranty-heading">Warranty</h3>
+        <p class="features-info" id="warranty-info">
+          Our policy will guarantee<br />your seat forward,<br />into the future
+          of TRAINS
+        </p>
+
+        <div id="void-dos"></div>
+      </section>
+
+      <div id="vid-div">
+        <iframe
+          width="240"
+          height="180"
+          src="https://www.youtube.com/embed/BhH9HJiBRX4"
+          frameborder="1"
+          id="video"
+        >
+        </iframe>
+      </div>
+
+      <section id="pricing">
+        <div class="void" id="void-one"></div>
+        <article class="pricing-article" id="caboose">
+          <h4 class="price-heading" id="caboose-heading">caboose</h4>
+          <p class="price" id="caboose-price">1,000</p>
+          <p class="denomination" id="caboose-denomination">double dollars</p>
+          <p class="price-category" id="caboose-category">Reasonably Priced</p>
+          <p class="price-description" id="caboose-description">
+            with a wonderful<br />view
+          </p>
+          <a href="#" class="price-button" id="caboose-button"> purchase </a>
+        </article>
+
+        <article class="pricing-article" id="cargo">
+          <h4 class="price-heading" id="cargo-heading">cargo</h4>
+          <p class="price" id="cargo-price">10,000</p>
+          <p class="denomination" id="cargo-denomination">double dollars</p>
+          <p class="price-category" id="cargo-category">Modestly Priced</p>
+          <p class="price-description" id="cargo-description">
+            coupled with the<br />carry-on experience
+          </p>
+          <a href="#" class="price-button" id="cargo-button"> purchase </a>
+        </article>
+
+        <article class="pricing-article" id="conductor">
+          <h4 class="price-heading" id="conductor-heading">conductor</h4>
+          <p class="price" id="conductor-price">1,000,000</p>
+          <p class="denomination" id="conductor-denomination">double dollars</p>
+          <p class="price-category" id="conductor-category">Elite Package</p>
+          <p class="price-description" id="conductor-description">
+            for steering<br />the ship
+          </p>
+          <a href="#" class="price-button" id="conductor-button"> purchase </a>
+        </article>
+        <div class="void" id="void-two"></div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-div" id="contact-div">
+        <a href="#" class="footer-link" id="contact"> contact </a>
+      </div>
+      <div class="footer-div" id="privacy-div">
+        <a href="#" class="footer-link" id="privacy"> privacy </a>
+      </div>
+      <div class="footer-div" id="terms-div">
+        <a href="#" class="footer-link" id="terms"> terms </a>
+      </div>
+      <p id="copyright">Copyright 2020 | Choose your CHOOCHOO</p>
+    </footer>
+  </body>
+</html>
